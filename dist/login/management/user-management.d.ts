@@ -12,4 +12,5 @@ export declare class UserManagement implements IUserManagement {
     findByUserName(username: string): User | null;
     findByEmail(email: string): User | null;
     findById(id: number): number;
+    deleteAccount(userName: string): void;
 }

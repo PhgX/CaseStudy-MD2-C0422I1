@@ -83,10 +83,10 @@ class LoginMenu {
         let password = '';
         let isValidPassword = true;
         do {
-            password = rl.question('Nhập mật khẩu (Có 1 ký tự viết hoa, 1 viết thường, 1 ký tự đặc biệt và 1 số):');
+            password = rl.question('Nhập mật khẩu (Có 1 ký tự viết hoa, 1 viết thường, 1 ký tự đặc biệt, 1 số ):');
             if (!regexForPassword.test(password)) {
                 isValidPassword = false;
-                console.log('Password nhập vào phải có ít nhất 1 ký tự thường 1 hoa 1 đặc biệt 1 số!');
+                console.log('Password nhập vào phải có ít nhất 1 ký tự thường 1 hoa 1 đặc biệt 1 số dài 8 đến 20 ký tự!');
             }
             else {
                 isValidPassword = true;

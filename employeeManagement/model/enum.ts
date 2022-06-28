@@ -13,6 +13,7 @@ export enum MenuSelection {
     SHOW_EMPLOYEE_LIST_BY_STATUS,
     SHOW_SALARY,
     SHOW_USER_ACC_INFOR,
+    DELETE_ACCOUNT,
     LOG_OUT    
 }
 

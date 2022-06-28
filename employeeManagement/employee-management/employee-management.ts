@@ -243,9 +243,10 @@ export class EmployeeManagement implements IEmployeeManagement<Employee> {
     }
 
     showListOfEmployeesWhoIsWorking() {
+        let count = 1;
         console.log(`---Danh sách nhân viên FullTime đang làm việc---`);
         for (let person of EmployeeManagement.employees) {
-            let count = 1;
+            
             if (person.status == WorkingStatus.WORK) {
                 if (person instanceof FullTimeEmployee) {
                     console.log(`
@@ -257,9 +258,9 @@ export class EmployeeManagement implements IEmployeeManagement<Employee> {
                 count++;
             }
         }
+        let count1 = 1;
         console.log(`---Danh sách nhân viên Parttime đang làm việc---`);
-        for (let person of EmployeeManagement.employees) {
-            let count1 = 1;
+        for (let person of EmployeeManagement.employees) {           
             if (person.status == WorkingStatus.WORK) {
                 if (person instanceof PartTimeEmployee) {
                     console.log(`

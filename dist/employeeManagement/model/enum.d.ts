@@ -21,7 +21,8 @@ export declare enum MenuSelection {
     SHOW_EMPLOYEE_LIST_BY_STATUS = 7,
     SHOW_SALARY = 8,
     SHOW_USER_ACC_INFOR = 9,
-    LOG_OUT = 10
+    DELETE_ACCOUNT = 10,
+    LOG_OUT = 11
 }
 export declare enum UserMenuSelection {
     LOGOUT = 0,

@@ -65,6 +65,23 @@ class UserManagement {
         }
         return index;
     }
+    deleteAccount(userName) {
+        let accounts = UserManagement.users;
+        let index = -1;
+        for (let account of accounts) {
+            if (account.username == userName) {
+                index = accounts.indexOf(account);
+                break;
+            }
+        }
+        if (index != -1) {
+            UserManagement.users.splice(index, 1);
+            console.log(`Xóa tài khoản thành công`);
+        }
+        else if (index = -1) {
+            console.log(`Tài khoản không tồn tại`);
+        }
+    }
 }
 exports.UserManagement = UserManagement;
 UserManagement.users = [];

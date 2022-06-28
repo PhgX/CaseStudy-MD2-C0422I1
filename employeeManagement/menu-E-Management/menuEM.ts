@@ -10,6 +10,7 @@ export class Menu {
         console.log('7. Hiển thị danh sách nhân viên');
         console.log('8. Tính lương nhân viên');
         console.log('9. Hiển thị thông tin tài khoản');
+        console.log('10. Xóa tài khoản nhân viên');
         console.log('0. Đăng xuất tài khoản')
     }
 
@@ -30,7 +31,7 @@ export class Menu {
     menuUser() {
         console.log(`---User Menu---`);
         console.log(`1. Hiển thị thông tin tài khoản`);
-        console.log(`2. Hiển thị thông tin cá nhân`);
+        console.log(`2. Hiển thị thông tin cá nhân`);       
         console.log(`0. Đăng xuất tài khoản`);
     }
 

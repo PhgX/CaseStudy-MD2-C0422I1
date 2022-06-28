@@ -5,6 +5,7 @@ import { PartTimeEmployee } from '../employee-management/part-time-employee';
 import * as rl from 'readline-sync'
 import { Menu } from '../menu-E-Management/menuEM';
 import { LoginMenu } from '../../login/login/login';
+import { UserManagement } from '../../login/management/user-management';
 
 export class MainEmployeeManagement {
     private employees = new EmployeeManagement();
@@ -333,8 +334,6 @@ export class MainEmployeeManagement {
     //     }
     // }
 
-
-
     showEmployeeListByStatusMenuChoice() {
         let choice = -1;
         do {
@@ -393,6 +392,15 @@ export class MainEmployeeManagement {
         clearinfo.logout_Clear_Info();
     }
 
+    deleteAccount_Admin(){
+        let userName : string;
+        do {
+            userName = rl.question('Nhập tên tài khoản muốn xóa');
+        } while(!userName)
+        let accountDelete = new UserManagement();
+        accountDelete.deleteAccount(userName);
+    }
+ 
     adminRun() {
         let choice = -1;
         do {
@@ -435,6 +443,9 @@ export class MainEmployeeManagement {
                     this.getAccountInfo();
                     break;
                 }
+                case MenuSelection.DELETE_ACCOUNT: {
+                    this.deleteAccount_Admin();
+                }
                 case MenuSelection.EXIT: {
                     this.logout_clearInfo();
                     break;
@@ -455,8 +466,8 @@ export class MainEmployeeManagement {
                     break;
                 }
                 case 2: {
-                    console.log(`Hiển thị thông tin cá nhân`);
-
+                    console.log(`---Hiển thị thông tin cá nhân---`);
+                    console.log(`---Chức năng đang được bảo trì---`);
                     break;
                 }
                 case 0: {
@@ -466,6 +477,7 @@ export class MainEmployeeManagement {
             }
         } while (choice != MenuSelection.EXIT)
     }
+  
 }
 
 

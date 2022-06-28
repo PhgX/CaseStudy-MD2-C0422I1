@@ -233,9 +233,9 @@ class EmployeeManagement {
         return salary;
     }
     showListOfEmployeesWhoIsWorking() {
+        let count = 1;
         console.log(`---Danh sách nhân viên FullTime đang làm việc---`);
         for (let person of EmployeeManagement.employees) {
-            let count = 1;
             if (person.status == enum_1.WorkingStatus.WORK) {
                 if (person instanceof fulltime_employee_1.FullTimeEmployee) {
                     console.log(`
@@ -247,9 +247,9 @@ class EmployeeManagement {
                 count++;
             }
         }
+        let count1 = 1;
         console.log(`---Danh sách nhân viên Parttime đang làm việc---`);
         for (let person of EmployeeManagement.employees) {
-            let count1 = 1;
             if (person.status == enum_1.WorkingStatus.WORK) {
                 if (person instanceof part_time_employee_1.PartTimeEmployee) {
                     console.log(`

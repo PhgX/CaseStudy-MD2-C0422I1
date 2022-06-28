@@ -23,7 +23,8 @@ var MenuSelection;
     MenuSelection[MenuSelection["SHOW_EMPLOYEE_LIST_BY_STATUS"] = 7] = "SHOW_EMPLOYEE_LIST_BY_STATUS";
     MenuSelection[MenuSelection["SHOW_SALARY"] = 8] = "SHOW_SALARY";
     MenuSelection[MenuSelection["SHOW_USER_ACC_INFOR"] = 9] = "SHOW_USER_ACC_INFOR";
-    MenuSelection[MenuSelection["LOG_OUT"] = 10] = "LOG_OUT";
+    MenuSelection[MenuSelection["DELETE_ACCOUNT"] = 10] = "DELETE_ACCOUNT";
+    MenuSelection[MenuSelection["LOG_OUT"] = 11] = "LOG_OUT";
 })(MenuSelection = exports.MenuSelection || (exports.MenuSelection = {}));
 var UserMenuSelection;
 (function (UserMenuSelection) {

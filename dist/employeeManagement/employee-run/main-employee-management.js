@@ -8,6 +8,7 @@ const part_time_employee_1 = require("../employee-management/part-time-employee"
 const rl = require("readline-sync");
 const menuEM_1 = require("../menu-E-Management/menuEM");
 const login_1 = require("../../login/login/login");
+const user_management_1 = require("../../login/management/user-management");
 class MainEmployeeManagement {
     constructor() {
         this.employees = new employee_management_1.EmployeeManagement();
@@ -376,6 +377,14 @@ class MainEmployeeManagement {
         let clearinfo = new login_1.LoginMenu();
         clearinfo.logout_Clear_Info();
     }
+    deleteAccount() {
+        let userName;
+        do {
+            userName = rl.question('Nhập tên tài khoản muốn xóa');
+        } while (!userName);
+        let accountDelete = new user_management_1.UserManagement();
+        accountDelete.deleteAccount(userName);
+    }
     adminRun() {
         let choice = -1;
         do {
@@ -417,6 +426,9 @@ class MainEmployeeManagement {
                 case enum_1.MenuSelection.SHOW_USER_ACC_INFOR: {
                     this.getAccountInfo();
                     break;
+                }
+                case enum_1.MenuSelection.DELETE_ACCOUNT: {
+                    this.deleteAccount();
                 }
                 case enum_1.MenuSelection.EXIT: {
                     this.logout_clearInfo();

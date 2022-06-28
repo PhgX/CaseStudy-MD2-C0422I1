@@ -14,6 +14,7 @@ export declare class MainEmployeeManagement {
     addNewEmployeeMenuChoice(): void;
     getAccountInfo(): void;
     logout_clearInfo(): void;
+    deleteAccount(): void;
     adminRun(): void;
     userRun(): void;
 }
